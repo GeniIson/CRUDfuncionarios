@@ -1,27 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Models;
 
-use App\Models\Funcionario;
-use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-class FuncionarioController extends Controller
+class Funcionario extends Model
 {
-    public function store(Request $request)
-    {
-        // Validação dos dados recebidos
-        $validatedData = $request->validate([
-            'nome' => 'required|string|max:255',
-            'cpf' => 'required|string|size:11|unique:funcionarios,cpf',
-            'data_nascimento' => 'required|date',
-            'telefone' => 'nullable|string|max:15',
-            'genero' => 'nullable|in:Masculino,Feminino,Outro',
-        ]);
+    use HasFactory;
 
-        // Criação do registro no banco
-        Funcionario::create($validatedData);
-
-        // Redirecionamento ou resposta
-        return redirect()->route('funcionarios.index')->with('success', 'Funcionário cadastrado com sucesso!');
-    }
+    // Definindo os campos que podem ser preenchidos
+    protected $fillable = [
+        'nome',
+        'cpf',
+        'data_nascimento',
+        'telefone',
+        'genero',
+    ];
 }

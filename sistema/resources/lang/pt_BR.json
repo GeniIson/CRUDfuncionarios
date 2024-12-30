@@ -35,7 +35,7 @@
   "Created.": "Criado.",
   "Current Password": "Senha Atual",
   "Dashboard": "Dashboard",
-  "Delete": "Deletar",
+  "Delete": "Excluir",
   "Delete API Token": "Deletar o Token de API",
   "Delete Account": "Deletar Conta",
   "Disable": "Desabilitar",
@@ -160,8 +160,10 @@
   "Your email address is unverified.": "Seu endereço de e-mail não foi verificado.",
   "Photo": "Foto",
   "Employee":"Funcionarios",
-  "Register New Employee":"Cadastrar Novo Funcionario",
-  "Don't have a registration?":"Não tem Cadastro?"
+  "Register Employee":"Cadastrar Funcionario",
+  "Don't have a registration?":"Não tem Cadastro?",
+
+  "To update":"Atualizar"
 
 
 }
